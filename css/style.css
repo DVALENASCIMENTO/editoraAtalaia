@@ -1,0 +1,1952 @@
+/* =========================================================
+   EDITORA ATALAIA
+   STYLE.CSS
+   Identidade: Preto + Dourado | Editorial Premium
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --preto: #050607;
+    --preto-2: #0b0d0f;
+    --preto-3: #111417;
+
+    --dourado: #d6a83b;
+    --dourado-claro: #f3d47a;
+    --dourado-escuro: #8f641d;
+
+    --branco: #f5f1e7;
+    --cinza: #aaa69d;
+    --cinza-escuro: #66635d;
+
+    --madeira: #2b160b;
+    --madeira-2: #4b2b15;
+
+    --borda: rgba(214, 168, 59, .45);
+
+    --sombra:
+        0 20px 60px rgba(0, 0, 0, .65);
+
+    --transicao:
+        .3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--branco);
+
+    background:
+
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(214, 168, 59, .12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 100% 50%,
+            rgba(214, 168, 59, .05),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #030405,
+            #080a0c 50%,
+            #030405
+        );
+
+    overflow-x: hidden;
+}
+
+
+button,
+a {
+    font: inherit;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   EFEITO DE TEXTURA DO FUNDO
+========================================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: .18;
+
+    background-image:
+
+        radial-gradient(
+            rgba(255,255,255,.15) .5px,
+            transparent .5px
+        );
+
+    background-size: 5px 5px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        14px
+        6%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(5,6,7,.98),
+            rgba(5,6,7,.90)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(214,168,59,.25);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.45);
+}
+
+
+/* LOGO */
+
+.logo img {
+
+    display: block;
+
+    width: 175px;
+
+    max-height: 65px;
+
+    object-fit: contain;
+}
+
+
+/* MENU */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+.menu a {
+
+    position: relative;
+
+    color: #d8d4ca;
+
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        color var(--transicao);
+}
+
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--dourado),
+            transparent
+        );
+
+    transform: translateX(-50%);
+
+    transition:
+        width var(--transicao);
+}
+
+
+.menu a:hover {
+
+    color:
+        var(--dourado-claro);
+}
+
+
+.menu a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(214,168,59,.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050607,
+            #090b0d
+        );
+}
+
+
+/* LINHAS DOURADAS */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 85%;
+
+    height: 85%;
+
+    border-top:
+        1px solid
+        rgba(214,168,59,.35);
+
+    border-bottom:
+        1px solid
+        rgba(214,168,59,.18);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-4deg);
+
+    pointer-events: none;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border:
+        1px solid
+        rgba(214,168,59,.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* CONTEÚDO */
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 40px 20px;
+}
+
+
+.hero-subtitulo {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--dourado-claro);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    letter-spacing: 10px;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+
+    position: relative;
+
+    margin: 5px 0 12px;
+
+    color:
+        var(--dourado-claro);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(60px, 11vw, 125px);
+
+    font-weight: 400;
+
+    letter-spacing:
+        clamp(8px, 2vw, 20px);
+
+    line-height: .95;
+
+    text-shadow:
+
+        0 2px 0 #7c5519,
+
+        0 5px 15px rgba(0,0,0,.9),
+
+        0 0 35px rgba(214,168,59,.12);
+}
+
+
+/* LINHA */
+
+.hero h1::before,
+.hero h1::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--dourado)
+        );
+}
+
+
+.hero h1::before {
+
+    right: 100%;
+
+    margin-right: 25px;
+}
+
+
+.hero h1::after {
+
+    left: 100%;
+
+    margin-left: 5px;
+
+    transform:
+        rotate(180deg);
+}
+
+
+.hero p {
+
+    margin-top: 20px;
+
+    color:
+        #e4dfd4;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* BOTÃO */
+
+.botao {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 35px;
+
+    padding:
+        14px
+        30px;
+
+    border:
+        1px solid
+        var(--dourado);
+
+    border-radius: 2px;
+
+    color:
+        var(--dourado-claro);
+
+    text-decoration: none;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(214,168,59,.15),
+            rgba(214,168,59,.03)
+        );
+
+    box-shadow:
+        0 0 25px rgba(214,168,59,.05);
+
+    transition:
+        var(--transicao);
+}
+
+
+.botao:hover {
+
+    color: #111;
+
+    background:
+        var(--dourado);
+
+    box-shadow:
+        0 0 35px rgba(214,168,59,.25);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+========================================================= */
+
+.secao-titulo {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin:
+        0 auto 55px;
+}
+
+
+.secao-titulo span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--dourado);
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+.secao-titulo h2 {
+
+    color:
+        var(--branco);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(32px, 5vw, 48px);
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+
+.secao-titulo h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 1px;
+
+    margin:
+        18px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--dourado),
+            transparent
+        );
+}
+
+
+.secao-titulo p {
+
+    color:
+        var(--cinza);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CATÁLOGO
+========================================================= */
+
+.catalogo {
+
+    position: relative;
+
+    padding:
+        100px 5%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #080a0c,
+            #0c0d0f
+        );
+}
+
+
+/* =========================================================
+   ESTANTE
+========================================================= */
+
+.estante-editora {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        55px
+        40px
+        35px;
+
+    border:
+        1px solid
+        rgba(214,168,59,.35);
+
+    border-radius: 4px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(214,168,59,.08),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            145deg,
+            #111416,
+            #050607
+        );
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.65),
+
+        inset 0 0 60px rgba(0,0,0,.5);
+}
+
+
+/* LINHA DECORATIVA */
+
+.estante-editora::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 8%;
+
+    right: 8%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--dourado),
+            transparent
+        );
+}
+
+
+/* CABEÇALHO DA ESTANTE */
+
+.estante-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.estante-header span {
+
+    color:
+        var(--dourado-claro);
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    letter-spacing: 7px;
+}
+
+
+.estante-header h2 {
+
+    margin:
+        5px 0;
+
+    color:
+        var(--dourado-claro);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 46px;
+
+    font-weight: 400;
+
+    letter-spacing: 12px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,.8);
+}
+
+
+.estante-header p {
+
+    color:
+        #c9c3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LIVROS
+========================================================= */
+
+.estante {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 350px;
+
+    padding:
+        20px
+        10px
+        0;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--dourado-escuro)
+        #090909;
+}
+
+
+.estante::-webkit-scrollbar {
+
+    height: 5px;
+}
+
+
+.estante::-webkit-scrollbar-track {
+
+    background: #080909;
+}
+
+
+.estante::-webkit-scrollbar-thumb {
+
+    background:
+        var(--dourado-escuro);
+
+    border-radius: 10px;
+}
+
+
+/* LIVRO */
+
+.livro {
+
+    position: relative;
+
+    flex:
+        0 0 78px;
+
+    height: 300px;
+
+    border: none;
+
+    border-radius:
+        4px
+        4px
+        2px
+        2px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.45),
+            rgba(255,255,255,.08) 20%,
+            rgba(0,0,0,.10) 48%,
+            rgba(0,0,0,.45)
+        ),
+
+        var(--cor);
+
+    box-shadow:
+
+        inset 2px 0 2px rgba(255,255,255,.08),
+
+        inset -5px 0 8px rgba(0,0,0,.35),
+
+        4px 5px 8px rgba(0,0,0,.6);
+
+    transition:
+        transform .35s ease,
+        filter .35s ease,
+        margin .35s ease;
+}
+
+
+/* COR DOS LIVROS */
+
+.livro:nth-child(1) {
+    --cor: #65351f;
+}
+
+.livro:nth-child(2) {
+    --cor: #172d42;
+}
+
+.livro:nth-child(3) {
+    --cor: #243d32;
+}
+
+.livro:nth-child(4) {
+    --cor: #5a431f;
+}
+
+.livro:nth-child(5) {
+    --cor: #3b274d;
+}
+
+.livro:nth-child(6) {
+    --cor: #4d2524;
+}
+
+.livro:nth-child(7) {
+    --cor: #243f4b;
+}
+
+.livro:nth-child(8) {
+    --cor: #4a351b;
+}
+
+.livro:nth-child(9) {
+    --cor: #382d1c;
+}
+
+
+/* EFEITO HOVER */
+
+.livro:hover {
+
+    transform:
+        translateY(-25px)
+        rotate(-1deg);
+
+    filter:
+        brightness(1.25);
+
+    z-index: 20;
+
+    box-shadow:
+
+        inset 2px 0 2px rgba(255,255,255,.12),
+
+        0 20px 25px rgba(0,0,0,.7),
+
+        0 0 20px rgba(214,168,59,.10);
+}
+
+
+/* NÚMERO */
+
+.livro-numero {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        var(--dourado-claro);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* TÍTULO VERTICAL */
+
+.livro-titulo {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 260px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-90deg);
+
+    color:
+        #f0e9d8;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 3px rgba(0,0,0,.8);
+}
+
+
+/* LINHAS DO LIVRO */
+
+.livro::before,
+.livro::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 9px;
+
+    right: 9px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(214,168,59,.8),
+            transparent
+        );
+}
+
+
+.livro::before {
+    top: 45px;
+}
+
+
+.livro::after {
+    bottom: 45px;
+}
+
+
+/* =========================================================
+   BASE DA ESTANTE
+========================================================= */
+
+.estante-madeira {
+
+    position: relative;
+
+    height: 30px;
+
+    margin:
+        -2px -10px 0;
+
+    border-top:
+        2px solid
+        #a06f25;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #5b3519,
+            #2a160b
+        );
+
+    box-shadow:
+
+        0 12px 18px rgba(0,0,0,.8),
+
+        inset 0 2px 3px rgba(255,255,255,.12);
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre {
+
+    padding:
+        110px 7%;
+
+    background:
+        #050607;
+}
+
+
+.sobre-conteudo {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding:
+        45px;
+
+    border:
+        1px solid
+        rgba(214,168,59,.2);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(214,168,59,.04),
+            transparent
+        );
+
+    box-shadow:
+        inset 0 0 50px rgba(0,0,0,.5);
+}
+
+
+.sobre-conteudo p {
+
+    color:
+        #c5c0b7;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+.sobre-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+
+    padding:
+        100px 7%;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(214,168,59,.07),
+            transparent 40%
+        ),
+
+        #080a0c;
+}
+
+
+.contato-conteudo {
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.contato-conteudo p {
+
+    color:
+        var(--cinza);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0,0,0,.88);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.popup.ativo {
+
+    display: flex;
+
+    animation:
+        fadePopup .3s ease;
+}
+
+
+@keyframes fadePopup {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* CONTEÚDO */
+
+.popup-conteudo {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 45px;
+
+    border:
+        1px solid
+        var(--dourado);
+
+    border-radius: 5px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(214,168,59,.09),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            145deg,
+            #151719,
+            #050607
+        );
+
+    box-shadow:
+
+        0 40px 100px rgba(0,0,0,.9),
+
+        0 0 40px rgba(214,168,59,.08);
+
+    animation:
+        abrirModal .35s ease;
+}
+
+
+@keyframes abrirModal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* FECHAR */
+
+.fechar-popup {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    z-index: 5;
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        1px solid
+        rgba(214,168,59,.35);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.4);
+
+    color:
+        var(--dourado-claro);
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        var(--transicao);
+}
+
+
+.fechar-popup:hover {
+
+    background:
+        var(--dourado);
+
+    color:
+        #111;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* LIVRO NO POPUP */
+
+.popup-livro {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* CAPA */
+
+.popup-capa {
+
+    flex:
+        0 0 280px;
+
+    position: relative;
+}
+
+
+.popup-capa::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.65);
+}
+
+
+.popup-capa img {
+
+    display: block;
+
+    width: 100%;
+
+    border:
+        1px solid
+        rgba(214,168,59,.35);
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.7);
+}
+
+
+/* INFORMAÇÕES */
+
+.popup-info {
+
+    flex: 1;
+}
+
+
+.popup-editora {
+
+    color:
+        var(--dourado);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.popup-info h2 {
+
+    margin:
+        12px 0 10px;
+
+    color:
+        var(--dourado-claro);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(27px, 4vw, 40px);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+
+
+#livroAutor {
+
+    color:
+        #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+    font-style: italic;
+}
+
+
+#livroDescricao {
+
+    color:
+        #d0cbc1;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO PDF */
+
+.botao-pdf {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 160px;
+
+    padding:
+        14px
+        25px;
+
+    border:
+        1px solid
+        var(--dourado);
+
+    border-radius: 2px;
+
+    color:
+        #111;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f1cc69,
+            #b98222
+        );
+
+    text-decoration: none;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.45);
+
+    transition:
+        var(--transicao);
+}
+
+
+.botao-pdf:hover {
+
+    filter:
+        brightness(1.15);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(214,168,59,.18);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+
+    position: relative;
+
+    padding:
+        55px 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(214,168,59,.2);
+
+    background:
+        #030405;
+}
+
+
+.rodape-logo img {
+
+    width: 190px;
+
+    max-height: 70px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+
+.rodape p {
+
+    margin:
+        8px 0;
+
+    color:
+        #77736b;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.rodape p:first-of-type {
+
+    color:
+        var(--dourado);
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+
+        padding:
+            12px 25px;
+    }
+
+
+    .menu {
+
+        gap: 18px;
+    }
+
+
+    .menu a {
+
+        font-size: 11px;
+    }
+
+
+    .hero {
+
+        min-height: 540px;
+    }
+
+
+    .popup-livro {
+
+        gap: 30px;
+    }
+
+
+    .popup-capa {
+
+        flex-basis: 220px;
+    }
+
+
+    .estante-editora {
+
+        padding:
+            45px 20px 30px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    .cabecalho {
+
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding:
+            15px;
+    }
+
+
+    .logo img {
+
+        width: 150px;
+    }
+
+
+    .menu {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .menu a {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 480px;
+    }
+
+
+    .hero-subtitulo {
+
+        font-size: 12px;
+
+        letter-spacing: 6px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(48px, 17vw, 75px);
+
+        letter-spacing: 7px;
+    }
+
+
+    .hero h1::before,
+    .hero h1::after {
+
+        display: none;
+    }
+
+
+    .hero p {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        line-height: 1.8;
+    }
+
+
+    /* SEÇÕES */
+
+    .catalogo,
+    .sobre,
+    .contato {
+
+        padding:
+            70px 15px;
+    }
+
+
+    .secao-titulo {
+
+        margin-bottom: 35px;
+    }
+
+
+    .secao-titulo h2 {
+
+        font-size: 30px;
+    }
+
+
+    /* ESTANTE */
+
+    .estante-editora {
+
+        padding:
+            45px 10px 25px;
+
+        border-radius: 3px;
+    }
+
+
+    .estante-header h2 {
+
+        font-size: 32px;
+
+        letter-spacing: 7px;
+    }
+
+
+    .estante-header p {
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .estante {
+
+        justify-content: flex-start;
+
+        min-height: 290px;
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .livro {
+
+        flex-basis: 63px;
+
+        height: 250px;
+    }
+
+
+    .livro-titulo {
+
+        font-size: 9px;
+
+        width: 210px;
+    }
+
+
+    .livro:hover {
+
+        transform:
+            translateY(-15px);
+    }
+
+
+    /* SOBRE */
+
+    .sobre-conteudo {
+
+        padding:
+            25px 20px;
+    }
+
+
+    .sobre-conteudo p {
+
+        font-size: 15px;
+    }
+
+
+    /* POPUP */
+
+    .popup {
+
+        padding: 10px;
+    }
+
+
+    .popup-conteudo {
+
+        max-height: 94vh;
+
+        padding:
+            45px 20px 25px;
+    }
+
+
+    .popup-livro {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+
+    .popup-capa {
+
+        flex-basis: auto;
+
+        width: 100%;
+    }
+
+
+    .popup-capa img {
+
+        width: 190px;
+
+        margin: auto;
+    }
+
+
+    .popup-info h2 {
+
+        font-size: 25px;
+    }
+
+
+    #livroDescricao {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .botao-pdf {
+
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .rodape {
+
+        padding:
+            45px 15px;
+    }
+
+
+    .rodape-logo img {
+
+        width: 160px;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+button:focus-visible,
+a:focus-visible {
+
+    outline:
+        2px solid
+        var(--dourado-claro);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+    }
+}
