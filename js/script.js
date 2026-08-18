@@ -1,4 +1,4 @@
-```javascript
+
 /* =========================================================
    EDITORA ATALAIA
    JS / SCRIPT.JS
@@ -11,19 +11,18 @@
 
 const livros = [
 
-    {
-        titulo: "ATOS 1.8",
+{
+    titulo: "BATISMO NAS ÁGUAS",
 
-        autor: "Diego Nascimento",
+    autor: "Editora Atalaia",
 
-        capa: "capas/atos-1-8.jpg",
+    capa: "images/capa_BatismoNasAguas.png",
 
-        descricao:
-            "Experiências de uma vida guiada pelo Espírito Santo. Um relato de experiências, aprendizados e momentos marcantes de uma caminhada de fé e serviço ao Reino de Deus.",
+    descricao:
+        "Início de uma nova vida em Cristo. Uma reflexão sobre o significado do batismo, a fé e a transformação de uma vida que decide seguir a Cristo.",
 
-        pdf: "pdf/atos-1-8.pdf"
-    },
-
+    pdf: "pdf/e-Book_BatismoNasAguas.pdf"
+},
 
     {
         titulo: "QUEM É JESUS CRISTO",
@@ -432,4 +431,4 @@ livroCapa.addEventListener(
 
     }
 );
-```
+
