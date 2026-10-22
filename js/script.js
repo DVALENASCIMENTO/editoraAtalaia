@@ -57,12 +57,12 @@ const livros = [
 
         autor: "Diego Nascimento",
 
-        capa: "capas/o-espirito-santo.jpg",
+        capa: "images/capa_o_Espirito_Santo.png",
 
         descricao:
             "Um estudo bíblico sobre a pessoa, a obra e a atuação do Espírito Santo na vida do cristão.",
 
-        pdf: "pdf/o-espirito-santo.pdf"
+        pdf: "pdf/e-Book O ESPÍRITO SANTO.pdf"
     },
 
 
