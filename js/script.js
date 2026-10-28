@@ -133,7 +133,22 @@ const livros = [
             "Material de formação cristã destinado a ajudar o discípulo a crescer na fé, conhecer as Escrituras e desenvolver uma vida de compromisso com Cristo.",
 
         pdf: "pdf/discipulado-cristao.pdf"
+    },
+
+    {
+    titulo: "MUDAM OS TEMPOS, OS REIS... MAS DEUS CONTINUA NO TRONO!",
+
+    autor: "Editora Atalaia",
+
+    capa: "images/capa_mudam_os_tempos_Deus Continua no Trono.png",
+
+    descricao:
+        "Uma reflexão sobre a soberania de Deus diante das mudanças dos tempos, dos reis e dos governos. Uma mensagem que destaca o governo eterno do Senhor sobre a história e sobre todas as nações.",
+
+    pdf: "pdf/e-Book Mudam_os_Tempos_os_Reis_Editora_Atalaia.pdf"
     }
+
+
 
 ];
 
